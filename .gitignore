@@ -1,5 +1,8 @@
 
-
-# Ignore all files in the data/ directory
+# Ignore all files in these directories
 data/*
 results/*
+
+# Keep the READMEs
+!data/README.md
+!results/README.md
