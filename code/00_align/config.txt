@@ -1,0 +1,4 @@
+P34765_lens1:var1=value1
+sample1:var2=value2
+sample2:var1=value3
+sample2:var2=value4

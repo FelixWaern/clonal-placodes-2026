@@ -1,0 +1,2 @@
+- I need run_trex.sh from server
+- I need run_trex_qc.sh from server

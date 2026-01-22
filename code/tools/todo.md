@@ -1,0 +1,3 @@
+- I need the first conda trex env from server
+- I need the trex-env from server
+- I need the TREX folder from server
