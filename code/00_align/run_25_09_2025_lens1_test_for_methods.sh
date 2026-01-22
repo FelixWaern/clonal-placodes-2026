@@ -1,31 +1,37 @@
 #!/bin/bash
 
-# Read the config file line by line
-#while IFS= read -r line; do
-#    # Skip empty lines and comments
-#    [[ -z "$line" || "$line" =~ ^# ]] && continue
-#    
-#    # Split on colon to get sample name and variable
-#    sample=$(echo "$line" | cut -d':' -f1)
-#    var_part=$(echo "$line" | cut -d':' -f2)
-#    
-#    # Split variable part to get name and value
-#    var_name=$(echo "$var_part" | cut -d'=' -f1)
-#    var_value=$(echo "$var_part" | cut -d'=' -f2)
-#    
-#    echo "Sample: $sample, Variable: $var_name, Value: $var_value"
-#done < config.txt
+# Create fastq directory if it doesn't exist
+mkdir -p /placodes/data/fastq/
 
-# Test
-/placodes/code/00_align/cellranger.nf \
-  --CPU=64 \
-  --ID=GEX \
-  --do_velocyto=true \
-  --multiple_fastqs=False \
-  --fastq=/placodes/data/fastq/P33869_lens1/GEX \
-  --reference=/placodes/data/reference/pMR671_mm39 \
-  --output_dir=/placodes/data/GEX && \
-rm -rf nextflow.work
+# Lens1
+# Create lens directory if it doesn't exist
+mkdir -p /placodes/data/fastq/P33869_lens1
+mkdir -p /placodes/data/fastq/P33869_lens1/GEX
+
+#wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
+#wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
+#wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
+wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
+
+#gunzip /placodes/data/fastq/P33869_lens1/GEX/*
+
+
+#nextflow run /placodes/code/00_align/cellranger.nf \
+#  --CPU=64 \
+#  --ID=GEX_ \
+#  --do_velocyto=true \
+#  --multiple_fastqs=False \
+#  --fastq=/placodes/data/fastq/P33869_lens1/GEX \
+#  --reference=/placodes/data/reference/pMR671_mm39 \
+#  --output_dir=/placodes/data/GEX && \
+#rm -rf nextflow.work
+
+
+
+
+
+
+
 
 # Lens 1
 #/home/felix/pipelines/pipelines_from_sergey/pipelines/cellranger.nf \

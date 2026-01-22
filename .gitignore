@@ -2,6 +2,7 @@
 # Ignore all files in these directories
 data/*
 results/*
+.vscode/*
 
 # Keep the READMEs
 !data/README.md

@@ -1,10 +1,9 @@
-# paper title. 
+# Single-cell, clonal and spatial atlases of neural plate border and neurogenic placodes illuminate their specification and evolution.
 
-This README file was generated on [data] by [Felix Waern]
 
 
 ## About the project
-Describe the project and paper. 
+Description of project and paper. 
 
 ![Flowchart of study workflow](workflow-glial-isoforms.png)
 
@@ -13,13 +12,17 @@ Details in this repository include:
 - Downloading and aligning reads
 - Extracting clodeIDs using TREX
 - Preprocessing data
-- 
+- Clonal clusering
+- Annotations and subsetting
+- Plotting result shown in paper
 
 
 >If you have any questions please reach out to me at:
 >> felix.waern@ki.se
 
 ## Copy repository
+git clone https://github.com/FelixWaern/clonal-placodes-2026.git
+
 
 ## Setup
 First install [docker](https://www.docker.com/get-started/).
@@ -30,7 +33,7 @@ https://www.10xgenomics.com/support/software/cell-ranger/downloads/previous-vers
 Example: "https://cf.10xgenomics.com/releases/cell-exp/cellranger-7.1.0.tar.gz?Expires=1764967206&Key-Pair-Id=APKAI7S6A5RYOXBWRPDA&Signature=TQalbcU6LUNXrLkHn9nqqs06TLOWzthfXTpfTOx-ru0y0466j~y8f9FeS1FR8tgbGfqg5XpzTKgqKed55HdqV3CCVhntHo4ixfvMXIZk5Z5wMNCYdOuUzi35XBg7keHvukgxG~pd7oAPZVhLs5GycpVOLwzh~dxWBruVK8U5MscTxED7IXeKFIjsDozSGIli2J8jKH4cioS9coYezQGM4px-WFA4uWwBkTVXAVjqpuzcpAqBIDbVCQ2KZkGf2zJ~U64SWbmwfIiBMcmTN3XnGI2DfxjrN2~V4xKtL9fV0-z-lIcROey6WfIZXIBG1IokX~Ha~CbrwhKo31ktS5LVFA__"
 
 
-Create docker image by running:
+Create docker image using the URL by running:
 
 
 
@@ -40,7 +43,7 @@ docker build -t docker_placodes --build-arg CELLRANGER_URL="<url-here>" -f Docke
 
 Run docker container using:
 ```
-docker container run -it docker_placodes bash
+#docker container run -it docker_placodes bash
 
 
 docker container run -it -v ./data:/placodes/data -v ./results:/placodes/results docker_placodes bash

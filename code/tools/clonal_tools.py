@@ -426,6 +426,7 @@ def draw_panel(adata, genes, title="", heigh=4, dpi=150):
         fig.tight_layout()
 
 def draw_counts_qc(adata, title, mt_max=None, umi_min=None, min_genes=None):
+    # KEEP!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     fig, axes = plt.subplots(ncols=3, figsize=(12, 4))
 
     axes[0].hist(
