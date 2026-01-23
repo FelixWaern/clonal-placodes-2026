@@ -84,6 +84,7 @@ black_borders_boxplot = {
 }
 
 def concatenate_mdatas(mdatas):
+    # KEEEP!!!!!!!!!!!!!!!!!!!
     keys = list(mdatas[0].mod.keys())
     mdata = {}
     for key in keys:
@@ -104,6 +105,7 @@ def concatenate_mdatas(mdatas):
     return mdata
 
 def assign_gaps(adata, verbose=True):
+    # KEEEEP!!!!!!!!!!!!!!!!!
     partial_clone_ids = [clone_id for clone_id in adata.var_names if "-" in clone_id]
     full_clone_ids = [clone_id for clone_id in adata.var_names if "-" not in clone_id]
     if verbose:
@@ -737,6 +739,7 @@ def plot_confusion_panel(adatas_FP, cell_difference, mean_logFC, final_assignmen
 
 
 def predict_doublets(mdata, FP, min_cloneID_umi=2):
+    # KEEP!!!!!!!!!!!!!
     if isinstance(FP, str):
         df = pd.DataFrame(
             mdata[FP].X.toarray() >= min_cloneID_umi,

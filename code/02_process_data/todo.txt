@@ -2,5 +2,6 @@
     - Remove the unused functions in tools. After everything is fixed for all notebooks. 
     - Check that paths work for loading.
 01_clonal_calling
--
+- Test new all to see how the predicted doublet score looks from begining. Meaning download and run things on poweredge. 
 02_Embedding
+
