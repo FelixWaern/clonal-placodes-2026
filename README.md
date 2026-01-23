@@ -4,6 +4,7 @@
 
 ## About the project
 Description of project and paper. 
+In this project we investigate the cranial placodes during development.
 
 ![Flowchart of study workflow](workflow-glial-isoforms.png)
 
