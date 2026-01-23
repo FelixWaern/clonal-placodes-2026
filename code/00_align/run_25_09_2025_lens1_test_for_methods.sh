@@ -2,16 +2,18 @@
 
 # Create fastq directory if it doesn't exist
 mkdir -p /placodes/data/fastq/
+mkdir -p /placodes/data/cellranger/
 
 # Lens1
 # Create lens directory if it doesn't exist
 mkdir -p /placodes/data/fastq/P33869_lens1
 mkdir -p /placodes/data/fastq/P33869_lens1/GEX
+mkdir -p /placodes/data/cellranger/lens1/
 
 #wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
 #wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
 #wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
-wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
+#wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE201257%5Fadata%5Fassigned%2Eh5ad%2Egz -P /placodes/data/fastq/P33869_lens1/GEX
 
 #gunzip /placodes/data/fastq/P33869_lens1/GEX/*
 
@@ -23,7 +25,7 @@ wget -nv https://ftp.ncbi.nlm.nih.gov/geo/series/GSE201nnn/GSE201257/suppl/GSE20
 #  --multiple_fastqs=False \
 #  --fastq=/placodes/data/fastq/P33869_lens1/GEX \
 #  --reference=/placodes/data/reference/pMR671_mm39 \
-#  --output_dir=/placodes/data/GEX && \
+#  --output_dir=/placodes/data/cellranger/lens1/GEX && \
 #rm -rf nextflow.work
 
 

@@ -1,0 +1,6 @@
+00_QC 
+    - Remove the unused functions in tools. After everything is fixed for all notebooks. 
+    - Check that paths work for loading.
+01_clonal_calling
+-
+02_Embedding

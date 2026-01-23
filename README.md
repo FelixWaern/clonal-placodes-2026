@@ -36,7 +36,7 @@ Example: "https://cf.10xgenomics.com/releases/cell-exp/cellranger-7.1.0.tar.gz?E
 
 Create docker image using the URL by running:
 
-
+/home/felix/data/translational_control
 
 ```
 docker build -t docker_placodes --build-arg CELLRANGER_URL="<url-here>" -f Dockerfile .

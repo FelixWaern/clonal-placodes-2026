@@ -539,6 +539,7 @@ def draw_clear_umap(adata, mt_max):
 
 
 def draw_cloneID_QC(adata_FP, FP):
+    # KEEP!!!!!!!!!!!!!!!!!!!!!!
     fig, axes = plt.subplots(ncols=3, figsize=(12, 4))
 
     for i in range(3):
@@ -939,6 +940,7 @@ def draw_expression_distribution(adata, FP1, FP2):
 
 
 def resolve_confusion(adatas_FP):
+    # KEEEP!!!!
     FP1 = list(adatas_FP.keys())[0]
     FP2 = list(adatas_FP.keys())[1]
 
@@ -992,6 +994,7 @@ def resolve_confusion(adatas_FP):
 
 
 def fast_clones(adata, min_cloneID_umi):
+    # KEEEP!!!!!!
     df = pd.DataFrame(
         adata.X.toarray() >= min_cloneID_umi,
         index=adata.obs.index,
@@ -1102,6 +1105,7 @@ def draw_gRNA_pies(adatas_FP, CRISPR_table, min_cloneID_umi=2, title="Basic gRNA
 def gex_qc_report(adata_raw, adatas_FP, mt_name="mt-", mt_max=25, savefig="output.pdf",
                   show=False, umi_min=None, min_genes=None, scrublet_threshold=None,
                   min_cloneID_umi=2, CRISPR_table=None):
+    # KEEP !!!!!!!!!!!!!!!!!!!!!!!!
     """
     This function creates a QC report.
      
