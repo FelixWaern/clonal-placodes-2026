@@ -4,4 +4,6 @@
 01_clonal_calling
 - Test new all to see how the predicted doublet score looks from begining. Meaning download and run things on poweredge. 
 02_Embedding
+    -   Done
+
 

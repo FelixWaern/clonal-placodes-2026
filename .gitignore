@@ -2,8 +2,9 @@
 # Ignore all files in these directories
 data/*
 results/*
-.vscode/*
+.vscode/
 
-# Keep the READMEs
+# Keep some files
 !data/README.md
+!data/cell_cycle_genes
 !results/README.md
