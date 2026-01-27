@@ -7,5 +7,4 @@ Need on GitHub or other things I need to fix:
 - All tools used, BUT ONLY THE ONES THAT ARE ACTUALLY USED. Trim the parts not used.  
 - Rewrite and rerun optimize_n_neighbors keeping only silhouette score.  
 - Annotation csv, cleaned up as well. 
-- Cell cycle genes must be in supplementary 
 - Set 03_reculsuter scrublet to sce.pp.scrublet. 
