@@ -1,0 +1,14 @@
+- high_res_UMAP (Done)
+- high_res_UMAP Simplified (Done)
+- Fate co-occurence individual clones (Done)
+- Clones on the transcriptional embedding
+- Nr of clones
+- Reclustered simplified subcluster high_res_UMAP (Done)
+- Clone clusters and rations
+- Distribution of fates across clonal clusters
+- Highly expressed genes for big data set (Done)
+- Fate co-occurance of unique clones 
+- Reclustered subcluster high_res_UMAP (Done)
+- Reclustered subcluster highly expressed genes (Done)
+- Locations subset of marker genes
+

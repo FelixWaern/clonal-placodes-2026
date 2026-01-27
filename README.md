@@ -63,6 +63,7 @@ which cellranger
 
 - Download reference
 - Download fastq
+- Download annotation
 
 ## 00_align
 
