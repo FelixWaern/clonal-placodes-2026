@@ -1,2 +1,3 @@
-- I need run_trex.sh from server
-- I need run_trex_qc.sh from server
+- Test that TREX runs after Cell Ranger has been performed.
+- Finilize this for every sample
+- See where output is so it is correct for 02_process_data

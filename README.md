@@ -3,8 +3,7 @@
 
 
 ## About the project
-Description of project and paper. 
-In this project we investigate the cranial placodes during development.
+This repository contains instructions and all the code neccessary to replicate the figures related to clonally lineage traced scRNA-seq analysis in the paper: _"Single-cell, clonal and spatial atlases of neural plate border and neurogenic placodes illuminate their specification and evolution"_.
 
 ![Flowchart of study workflow](workflow-glial-isoforms.png)
 
@@ -22,8 +21,10 @@ Details in this repository include:
 >> felix.waern@ki.se
 
 ## Copy repository
+Start by copying the repository using the following command.  
+```
 git clone https://github.com/FelixWaern/clonal-placodes-2026.git
-
+```
 
 ## Setup
 First install [docker](https://www.docker.com/get-started/).
@@ -36,7 +37,6 @@ Example: "https://cf.10xgenomics.com/releases/cell-exp/cellranger-7.1.0.tar.gz?E
 
 Create docker image using the URL by running:
 
-/home/felix/data/translational_control
 
 ```
 docker build -t docker_placodes --build-arg CELLRANGER_URL="<url-here>" -f Dockerfile .
@@ -44,14 +44,11 @@ docker build -t docker_placodes --build-arg CELLRANGER_URL="<url-here>" -f Docke
 
 Run docker container using:
 ```
-#docker container run -it docker_placodes bash
-
-
 docker container run -it -v ./data:/placodes/data -v ./results:/placodes/results docker_placodes bash
 ```
 
 
-After creating docker container and running it check installs.
+After creating docker container and running it check installs by running the following commands.
 ```
 nextflow info
 
@@ -60,24 +57,31 @@ which cellranger
 
 
 ## Download
+All relevant files should be downloaded when running the pipeline. However if you need to or want to download them manually the follow the links below.
 
-- Download reference
-- Download fastq
-- Download annotation
+- Download [reference # FIX PATH LATER WHEN PUBLISHED]()
+- Download [fastq. #FIX PATH LATER WHEN PUBLISHED]()
+- Download [annotation # FIX PATH LATER WHEN PUBLISHED]()
 
-## 00_align
+## Analysis
 
-## 01_trex
+### 00_align
+Here all the fastqs are downloaded and aligned using Cell Ranger.
 
-## 02_process_data
+### 01_trex
+Here we run the TREX pipeline to get the cloneIDs.
 
+### 02_process_data
+Here we do QC, call clones and create some embeddings.
 
-## Install conda environement
-Install [conda](https://docs.conda.io/projects/conda/en/stable/user-guide/install/index.html)
+### 03_mergin_and_clonal_clustering
+This merges the data into the final object for the full dataset.
 
-Download `environement.yml`. 
+### 04_annotations_and_subsets
+In this folder we annotate the data, recluster it, and reannotate it.
 
-
+### 05_plot_results
+Finally, we plot the results using the notebooks in this folder.
 
 ***
 
@@ -85,8 +89,8 @@ Download `environement.yml`.
 #### If you want to remove docker container and images afterwards:
 
 - ``` ctrl+d```: To exit session
-- ``` docker ps -a ```: To see all the running containers in your machine.
-- ``` docker stop <container_id> ```: : To stop a running container.
+- ``` docker ps -a ```: To see all the running containers on your machine.
+- ``` docker stop <container_id> ```:  To stop a running container.
 - ``` docker rm <container_id>```: To remove/delete a docker container(only if it stopped).
 - ``` docker image ls ```: To see the list of all the available images with their tag, image id, creation time and size.
 - ``` docker rmi <image_id> ```: To delete a specific image.
